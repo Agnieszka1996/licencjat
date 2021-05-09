@@ -1,0 +1,12 @@
+// import wlasnych zmiennych
+@import 'custom/base/variables';
+
+// import Bootstrapa
+@import 'bootstrap/bootstrap';
+
+// import wlasnych stylow
+@import 'custom/base/base_styles';
+@import 'custom/base/typography';
+// @import 'hover/scss/hover';
+@import 'custom/components/components';
+// @import 'style/aos/src/sass/aos';

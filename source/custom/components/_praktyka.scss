@@ -1,0 +1,44 @@
+.praktyka {
+    &__title {
+        margin: 3rem 0;
+    }
+
+    &__box {
+        margin: 2rem 1rem;
+        height: 300px;
+        border: solid 4px black;
+    }
+
+    &__caption {
+        font-size: 20px;
+        font-weight: 600;
+        margin: 1rem 0 .5rem 0;
+    }
+
+    &__text {
+        font-size: 16px;
+        font-weight: 400;
+    }
+
+    &__pole-tekstowe {
+        height: 100px;
+        margin: auto;
+        word-wrap: break-word;
+        overflow: hidden;
+
+        &--font1 {
+            font-family: 'Suez One', serif;
+        }
+    }
+
+    &__input {
+        border: solid 2px black;
+        margin-top: 2rem;
+        height: 50px;
+        padding: 10px;
+    }
+
+    &___tekst {
+        font-size: 20px;
+    }
+}

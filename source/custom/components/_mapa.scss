@@ -1,0 +1,35 @@
+.mapa {
+
+    &__map {
+        overflow: auto;
+        height: 705px;
+        position: relative;
+
+        &__europa {
+            height: 684px;
+            margin: 4rem auto;
+
+            path {
+                stroke: #fff;
+                stroke-width: 2;
+                fill: #000;
+                cursor: pointer;
+
+                &:hover {
+                    fill: gray;
+                }
+
+                &:active {
+                    fill: light-orange;
+                }
+            }
+        }
+    }
+
+    &__panstwo {
+        margin: 2rem auto;
+        text-align: center;
+    }
+
+
+}

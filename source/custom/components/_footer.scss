@@ -1,0 +1,29 @@
+.footer {
+    background-color: #000;
+    height: 300px;
+
+    &__links {
+        padding: 2rem 0 0 0;
+    }
+
+    &__link {
+        color: #fff;
+        font-size: 16px;
+        font-family: 'Suez One', serif;
+        line-height: 30px;
+
+        @media (max-width: 767.98px) {
+            text-align: center;
+        }
+
+        a {
+            color: #fff;
+        }
+    }
+
+    &__copy {
+        text-align: right;
+        margin-left: auto;
+        color: #fff;
+    }
+}

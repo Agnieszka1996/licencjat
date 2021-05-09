@@ -1,0 +1,41 @@
+.wpisy-blogowe {
+    a {
+        color: #000 !important;
+    }
+
+    &__wpis {
+        margin: 3rem 0;
+
+        &__cover {
+            height: 300px;
+            width: 500px;
+            background-color: #000;
+        }
+
+        &__tekst {
+            margin: auto 0 auto 3rem;
+
+            &--tytul {
+                font-family: 'Suez One', serif;
+                font-weight: 600;
+                font-size: 20px;
+                margin-bottom: 1rem;
+            }
+
+            &--tagi {
+                font-size: 16px;
+                margin-top: 1rem;
+
+                &--bold {
+                    font-weight: 700;
+                    margin-left: 0;
+                }
+            }
+
+            &--lead {
+                font-size: 16px;
+
+            }
+        }
+    }
+}
