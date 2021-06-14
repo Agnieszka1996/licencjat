@@ -1,0 +1,23 @@
+.reguly {
+    &__regula {
+        &__title {
+            margin: 2rem 0 .5rem;
+            font-size: 24px;
+            font-family: 'Suez One', serif;
+            line-height: 35px;
+            color: #000;
+        }
+
+        &__lead {
+            margin: 1rem 0;
+            font-size: 16px;
+            color: #000;
+            font-weight: 500;
+        }
+
+        &__tresc {
+            font-size: 18px;
+            line-height: 30px;
+        }
+    }
+}

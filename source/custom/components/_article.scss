@@ -56,10 +56,20 @@
         margin: 7rem auto auto auto;
 
         &__zajawka {
-            margin: 2rem 0;
+            margin: 1.5rem 0;
 
             &__tytul {
                 font-family: 'Suez One', serif;
+                margin: .5rem 0 1rem 0;
+                color: #000;
+
+                a {
+                    color: #000;
+
+                    &:hover {
+                        color: gray;
+                    }
+                }
             }
 
             img {

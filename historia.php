@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Tablet Gutenberga</title>    
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Tablet Gutenberga</title>    
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Suez+One&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
@@ -35,8 +35,8 @@
             <div class="col-12 col-md-2 header__menu__item dropdown">
                 praktyka
                     <div class="dropdown-content">
-                        <a href="./praktyka.html">typograficzna mapa Europy</a>
-                        <a href="./blog.php">miniedytor tekstu</a>
+                        <a href="./typograficzna-mapa-europy.php">Typograficzna Mapa Europy</a>
+                        <a href="./miniedytor.html">Miniedytor tekstu</a>
                     </div>
             </div>
             <div class="col-12 col-md-2 header__menu__item">
@@ -54,33 +54,36 @@
 
 
     <div class="container">
-        <main>            
-            <h2 class="materialy__title">Wiedza</h2>
+        <main>
+            
+            <h2>Historia typografii</h2>
 
-            <div class="row d-flex justify-content-center wiedza">
+            <div class="row historia">
 
-                
-                <div class="col-12 col-lg-3 wiedza__box">
-                    <a href="./terminy.php">
-                        <h3>terminy</h3>
-                    </a>
-                </div>
-                
+                <?php
+                    include "autoryzacja.php";
 
-                <div class="col-12 col-lg-3 wiedza__box">
-                    <a href="./reguly.php">
-                        <h3>reguły</h3>
-                    </a>
-                </div>
-                
-                <div class="col-12 col-lg-3 wiedza__box">
-                    <a href="./historia.php">
-                        <h3>historia</h3>
-                    </a>
-                </div>
+                    $conn = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname)
+                    or die("Błąd połączenia z bazą");
+                    mysqli_set_charset($conn, "utf8");
+
+                    $result=mysqli_query($conn, "SELECT * FROM historia");
+
+                    while($row=mysqli_fetch_array($result))
+                    {
+                    echo '<div class="col-12 col-lg-6 offset-lg-1 d-flex historia historia__wpis">
+                            <a href="./historia-wpis.php?id='.$row['id'].'">
+                                <div class="historia historia__wpis historia__wpis__title">'.$row['tytul'].'</div>
+                                <div class="historia historia__wpis historia__wpis__lead">'.$row['lead'].'</div>
+                            </a>                                                           
+                        </div>';
+                    
+                    }
+
+                    ?>
 
             </div>
-
+            
         </main>
     </div>
 

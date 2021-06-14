@@ -3,9 +3,13 @@
         margin: 3rem 0;
     }
 
+    &__font-name {
+        margin-bottom: 1.5rem;
+    }
+
     &__box {
         margin: 2rem 1rem;
-        height: 300px;
+        height: 350px;
         border: solid 4px black;
     }
 
@@ -16,7 +20,8 @@
     }
 
     &__text {
-        font-size: 16px;
+        font-size: 13px;
+        line-height: 16px;
         font-weight: 400;
     }
 
@@ -25,9 +30,30 @@
         margin: auto;
         word-wrap: break-word;
         overflow: hidden;
+        font-size: 22px;
 
         &--font1 {
-            font-family: 'Suez One', serif;
+            font-family: 'Cinzel', serif;
+        }
+
+        &--font2 {
+            font-family: 'Anton', sans-serif;
+        }
+
+        &--font3 {
+            font-family: 'IBM Plex Mono', monospace;
+        }
+
+        &--font4 {
+            font-family: 'Tangerine', cursive;
+        }
+
+        &--font5 {
+            font-family: 'Prata', serif;
+        }
+
+        &--font6 {
+            font-family: 'Righteous', cursive;
         }
     }
 

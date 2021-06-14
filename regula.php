@@ -12,7 +12,45 @@
     <link rel="stylesheet" href="style/style.css">
 </head>
 <body>
-    
+    <div class="container-fluid">
+
+        <div class="header">
+            <a href="http://brzoza.wzks.uj.edu.pl/~18_bien/aplikacja/">
+                <img src="assets/banner.png">
+            </a>
+        </div>
+        <div class="row d-flex header__menu">
+            <div class="col-12 col-md-2 header__menu__item">
+                <a href="./wiedza.html">
+                    wiedza
+                </a>
+            </div>
+            <div class="col-12 col-md-2 header__menu__item">
+                <a href="./blog.php">
+                    blog
+                </a>
+            </div>
+            <div class="col-12 col-md-2 header__menu__item dropdown">
+                praktyka
+                    <div class="dropdown-content">
+                        <a href="./typograficzna-mapa-europy.php">typograficzna mapa Europy</a>
+                        <a href="./miniedytor.html">miniedytor tekstu</a>
+                    </div>
+            </div>
+            <div class="col-12 col-md-2 header__menu__item">
+                <a href="./materiały.html">
+                    materiały
+                </a>
+            </div>
+            <div class="col-12 col-md-2 header__menu__item">
+                <a href="./o-serwisie.html">
+                    o serwisie
+                </a>
+            </div>
+        </div>
+
+    </div>
+
 <main>
 
     <?php
@@ -24,26 +62,19 @@ mysqli_set_charset($conn, "utf8");
 
 if($_GET['id']!="") 
 {
-    $result=mysqli_query($conn, "SELECT * FROM blog WHERE id=".$_GET['id']);
+    $result=mysqli_query($conn, "SELECT * FROM reguly WHERE id=".$_GET['id']);
 }
 
 while($row=mysqli_fetch_array($result))
 {
-    echo '<div class="container-fluid">
-        <div class="article__banner" style="background-image: url('.$row['grafika'].');background-size: cover;"><div class="article__overlay"><h2 class="article__title">'.$row['tytul'].'</h2></div>
-    </div>
-    <div class="container">
+    echo '<div class="container">
 
         <div class="row">
 
             <div class="col-12 col-lg-8 article">
-
-                <div class="container">                    
-                    <div class="article__data">'.$row['data'].'</div>
-                    <div class="article__lead">'.$row['lead'].'</div>
-                    <div class="article__tresc">'.$row['tresc'].'</div>
-                    <div class="article__tagi"><span class="article__tagi article__tagi--bold">Tagi:</span>'.$row['tagi'].'</div>
-                </div>
+                    <div class="reguly reguly__regula reguly__regula__title">'.$row['tytul'].'</div>                    
+                    <div class="reguly reguly__regula reguly__regula__lead">'.$row['lead'].'</div>
+                    <div class="reguly reguly__regula reguly__regula__tresc">'.$row['tresc'].'</div>                
             </div>
             
 
@@ -52,24 +83,19 @@ while($row=mysqli_fetch_array($result))
                 <h3>Zobacz także</h3>';
 }
 
-                $result=mysqli_query($conn, "SELECT * FROM blog WHERE id<>".$_GET['id']);
+                $result=mysqli_query($conn, "SELECT * FROM reguly WHERE id<>".$_GET['id']);
 
                 while($row=mysqli_fetch_array($result))
                 {
                 echo '<div class="d-flex article__zajawki article__zajawki__zajawka">
-                    <a href="./artykul.php?id='.$row['id'].'">
-                        <div>                        
-                            <img src="'.$row['grafika'].'" class="article__zajawki__zajawka__img"/>                       
-                        </div>                    
+                    <a href="./regula.php?id='.$row['id'].'">  
                         <div class="article__zajawki article__zajawki__zajawka article__zajawki__zajawka__tytul">'.$row['tytul'].'</div>
                     </a>
                 </div>';
                 }
                 echo '
             </div>
-        </div>
-    
-    </div>';
+        </div>';
     
     ?>
 </main>

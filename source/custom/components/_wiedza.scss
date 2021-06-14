@@ -1,0 +1,32 @@
+.wiedza {
+
+    &__box {
+        background-color: #000;
+        height: 300px;
+        margin: 1rem;
+        color: #fff;
+        font-size: 18px;
+        text-align: center;
+
+        a {
+            color: #fff;
+
+            &:hover {
+                color: #000;
+            }
+        }
+
+        &:hover {
+            background-color: #fff;
+            color: #000;
+            border: 5px solid black;
+        }
+
+        h3 {
+            position: relative;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+}

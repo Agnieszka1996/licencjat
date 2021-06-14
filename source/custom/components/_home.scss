@@ -3,9 +3,8 @@
 
     &__item {
         border: 3px solid black;
-        height: 300px;
         width: 400px;
-        margin: 3rem 1rem;
+        margin: 3rem .5rem;
         padding: 0;
         position: relative;
 
@@ -19,7 +18,14 @@
             margin: 0;
             border: none;
             position: absolute;
-            bottom: 1.5rem;
+            bottom: 1rem;
+            color: #000;
+            font-family: 'Suez One', serif;
+
+            a {
+                color: #000;
+                font-family: 'Suez One', serif;
+            }
         }
     }
 
@@ -66,7 +72,6 @@
 
         &__header {
             margin-left: 1.5rem;
-            margin-top: 0;
         }
     }
 }

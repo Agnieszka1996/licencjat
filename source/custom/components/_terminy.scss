@@ -1,0 +1,30 @@
+.terminy {
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+
+    &__termin {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        margin-right: 2rem;
+
+        &__nazwa {
+            font-weight: 700;
+            font-family: 'Suez One';
+            font-size: 22px;
+        }
+
+        &__definicja {
+            font-weight: 400;
+            font-size: 16px;
+            margin-left: 1.5rem;
+
+            a {
+                color: #000;
+
+                &:hover {
+                    color: gray;
+                }
+            }
+        }
+    }
+}

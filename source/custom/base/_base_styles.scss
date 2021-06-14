@@ -2,6 +2,16 @@
     padding: 0;
 }
 
+.container {
+    margin: 5rem auto;
+    max-width: 1280px;
+
+    &__small {
+        max-width: 900px;
+    }
+}
+
+
 a {
     text-decoration: none;
 }
